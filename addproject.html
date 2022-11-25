@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add Project</title>
+        <link rel="stylesheet" href="assets/css/addproject.css" />
+        <link rel="icon" href="assets/img/logo.png">
+    </head>
+    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+        <nav>
+            <ul>
+                <li><img src="assets/img/logo.png" style="width: 50px" /></li>
+                <li>
+                    <a href="index.html" style="font-weight: bold">Home</a>
+                </li>
+                <li><a href="">MyProject</a></li>
+                <li
+                    style="
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                    "
+                >
+                    <a href="contac.html" class="btn-contactme">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="myproject">
+            <div class="myproject-form">
+                <div class="form-container">
+                    <h1>ADD MY MYPROJECT</h1>
+                    <form onsubmit="addData(event)">
+                        <div class="form-control">
+                            <label for="project_name">Project Name</label>
+                            <input
+                                type="text"
+                                name="project_name"
+                                id="project_name"
+                            />
+                        </div>
+                        <div
+                            class="form-control form_date"
+                            ;
+                            style="display: flex; gap: 20px"
+                        >
+                            <div class="date">
+                                <label for="start_date">Start Date</label>
+                                <input
+                                    type="date"
+                                    name="start_date"
+                                    id="start_date"
+                                />
+                            </div>
+                            <div class="date">
+                                <label for="end_date">End Date</label>
+                                <input
+                                    type="date"
+                                    name="end_date"
+                                    id="end_date"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label class="description">Description</label>
+                            <textarea
+                                name="description"
+                                id="description"
+                            ></textarea>
+                        </div>
+                        <div class="form-control">
+                            <label for="technologies">Technologies</label>
+                            <div class="tecnologies">
+                                <div class="input-checkbox">
+                                    <input
+                                        class="technologies_input"
+                                        type="checkbox"
+                                        id="nodejs"
+                                        name="nodejs"
+                                        value="nodejs"
+                                    />
+                                    <label for="nodejs">Node Js</label>
+                                </div>
+                                <div class="input-checkbox">
+                                    <input
+                                        class="technologies_input"
+                                        type="checkbox"
+                                        id="reactjs"
+                                        name="reactjs"
+                                        value="reactjs"
+                                    />
+                                    <label for="reactjs">React Js</label>
+                                </div>
+                                <div class="input-checkbox">
+                                    <input
+                                        class="technologies_input"
+                                        type="checkbox"
+                                        id="nextjs"
+                                        name="nextjs"
+                                        value="nextjs"
+                                    />
+                                    <label for="nextjs">Next Js</label>
+                                </div>
+                                <div class="input-checkbox">
+                                    <input
+                                        class="technologies_input"
+                                        type="checkbox"
+                                        id="Typescript"
+                                        name="Typescript"
+                                        value="Typescript"
+                                    />
+                                    <label for="Typescript">Typescript</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label> Upload Image </label>
+                            <div class="input-my-project-image-group">
+                                <label for="input-my-project-image-group">
+                                </label>
+                                <input type="file" id="image" />
+                                <img
+                                    src="assets/img/file.png"
+                                    style="
+                                        margin-left: 200px;
+                                        height: fit-content;
+                                    "
+                                    ;
+                                    alt="file"
+                                />
+                            </div>
+                            <div>
+                                <button type="submit" class="button-myproject">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="result-project">
+            <div class="container">
+                <h1 class="project-heading">My Project</h1>
+                <div class="wrap-list-item" id="project_list"></div>
+            </div>
+        </div>
+        <hr style="width: 90%" />
+        <script src="assets/js/addproject.js"></script>
+    </body>
+</html>
